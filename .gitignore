@@ -1,0 +1,53 @@
+# === DATASETS & OUTPUTS ===
+P1/
+extra/
+data/
+datasets/
+*.csv
+*.tsv
+*.xlsx
+*.json
+*.parquet
+*.h5
+*.zip
+*.tar
+*.gz
+*.npz
+*.npy
+*.pkl
+*.sav
+
+# === NOTEBOOK CHECKPOINTS ===
+.ipynb_checkpoints/
+
+# === PYTHON CACHE ===
+__pycache__/
+*.py[cod]
+*.so
+
+# === ENVIRONMENTS ===
+.env
+.venv/
+env/
+venv/
+*.env
+
+# === LOGS ===
+*.log
+logs/
+output/
+results/
+runs/
+
+# === SYSTEM FILES ===
+.DS_Store
+Thumbs.db
+
+# === MODEL FILES ===
+*.h5
+*.pt
+*.pth
+*.onnx
+*.joblib
+models/
+checkpoint/
