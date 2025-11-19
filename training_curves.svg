@@ -1,0 +1,54 @@
+<svg xmlns='http://www.w3.org/2000/svg' width='800' height='600' viewBox='0 0 800 600'>
+<style> .axis { stroke:#888; stroke-width:1; } .grid { stroke:#ddd; stroke-width:0.5; } .label { font-size:12px; font-family:Arial, sans-serif; fill:#333;} .title { font-size:16px; font-family:Arial, sans-serif; font-weight:bold; fill:#111;} </style>
+<text x='400.0' y='24' text-anchor='middle' class='title'>Validation metrics per epoch (CNN vs ResNet18)</text>
+<rect x='80' y='40.0' width='680' height='240.0' fill='none' class='axis' />
+<line x1='80' y1='280.0' x2='760' y2='280.0' class='grid' />
+<text x='72' y='284.0' text-anchor='end' class='label'>2.88</text>
+<line x1='80' y1='232.0' x2='760' y2='232.0' class='grid' />
+<text x='72' y='236.0' text-anchor='end' class='label'>7.84</text>
+<line x1='80' y1='184.0' x2='760' y2='184.0' class='grid' />
+<text x='72' y='188.0' text-anchor='end' class='label'>12.79</text>
+<line x1='80' y1='136.0' x2='760' y2='136.0' class='grid' />
+<text x='72' y='140.0' text-anchor='end' class='label'>17.74</text>
+<line x1='80' y1='88.0' x2='760' y2='88.0' class='grid' />
+<text x='72' y='92.0' text-anchor='end' class='label'>22.70</text>
+<line x1='80' y1='40.0' x2='760' y2='40.0' class='grid' />
+<text x='72' y='44.0' text-anchor='end' class='label'>27.65</text>
+<text x='30' y='160.0' text-anchor='middle' transform='rotate(-90 30,160.0)' class='label'>Val MAE (px)</text>
+<rect x='80' y='320.0' width='680' height='240.0' fill='none' class='axis' />
+<line x1='80' y1='560.0' x2='760' y2='560.0' class='grid' />
+<text x='72' y='564.0' text-anchor='end' class='label'>0.09</text>
+<line x1='80' y1='512.0' x2='760' y2='512.0' class='grid' />
+<text x='72' y='516.0' text-anchor='end' class='label'>0.26</text>
+<line x1='80' y1='464.0' x2='760' y2='464.0' class='grid' />
+<text x='72' y='468.0' text-anchor='end' class='label'>0.43</text>
+<line x1='80' y1='416.0' x2='760' y2='416.0' class='grid' />
+<text x='72' y='420.0' text-anchor='end' class='label'>0.60</text>
+<line x1='80' y1='368.0' x2='760' y2='368.0' class='grid' />
+<text x='72' y='372.0' text-anchor='end' class='label'>0.77</text>
+<line x1='80' y1='320.0' x2='760' y2='320.0' class='grid' />
+<text x='72' y='324.0' text-anchor='end' class='label'>0.94</text>
+<line x1='80.0' y1='320.0' x2='80.0' y2='560.0' class='grid' />
+<text x='80.0' y='576.0' text-anchor='middle' class='label'>1</text>
+<line x1='216.0' y1='320.0' x2='216.0' y2='560.0' class='grid' />
+<text x='216.0' y='576.0' text-anchor='middle' class='label'>13</text>
+<line x1='352.0' y1='320.0' x2='352.0' y2='560.0' class='grid' />
+<text x='352.0' y='576.0' text-anchor='middle' class='label'>25</text>
+<line x1='488.0' y1='320.0' x2='488.0' y2='560.0' class='grid' />
+<text x='488.0' y='576.0' text-anchor='middle' class='label'>36</text>
+<line x1='624.0' y1='320.0' x2='624.0' y2='560.0' class='grid' />
+<text x='624.0' y='576.0' text-anchor='middle' class='label'>48</text>
+<line x1='760.0' y1='320.0' x2='760.0' y2='560.0' class='grid' />
+<text x='760.0' y='576.0' text-anchor='middle' class='label'>60</text>
+<text x='420.0' y='592.0' text-anchor='middle' class='label'>Epoch</text>
+<text x='30' y='440.0' text-anchor='middle' transform='rotate(-90 30,440.0)' class='label'>PCK@0.05</text>
+<path d='M80.00,40.00 L137.63,134.17 L149.15,167.41 L241.36,220.14 L287.46,233.10 L345.08,235.33 L402.71,248.30 L414.24,249.97 L494.92,259.30 L517.97,258.57 L529.49,240.77 L610.17,260.67 L690.85,259.90 L760.00,258.09' fill='none' stroke='#1f77b4' stroke-width='2' />
+<path d='M80.00,560.00 L137.63,523.75 L149.15,497.61 L241.36,407.68 L287.46,392.79 L345.08,384.36 L402.71,363.56 L414.24,362.44 L494.92,348.95 L517.97,348.10 L529.49,373.68 L610.17,345.57 L690.85,345.85 L760.00,347.82' fill='none' stroke='#1f77b4' stroke-width='2' />
+<path d='M149.15,220.51 L160.68,241.91 L172.20,247.46 L229.83,261.82 L264.41,266.47 L310.51,270.15 L322.03,272.70 L368.14,276.73 L425.76,276.66 L460.34,280.00 L517.97,279.34 L541.02,279.98 L633.22,277.58' fill='none' stroke='#ff7f0e' stroke-width='2' />
+<path d='M149.15,403.75 L160.68,372.55 L172.20,364.40 L229.83,343.89 L264.41,338.55 L310.51,332.65 L322.03,328.99 L368.14,323.37 L425.76,322.81 L460.34,320.00 L517.97,320.84 L541.02,320.28 L633.22,322.53' fill='none' stroke='#ff7f0e' stroke-width='2' />
+<rect x='580' y='36' width='200' height='40' fill='white' stroke='#ccc' stroke-width='1' />
+<line x1='590' y1='50' x2='610' y2='50' stroke='#1f77b4' stroke-width='2' />
+<text x='615' y='54' class='label'>CNN</text>
+<line x1='590' y1='68' x2='610' y2='68' stroke='#ff7f0e' stroke-width='2' />
+<text x='615' y='72' class='label'>ResNet18 (epochs ≥ 7)</text>
+</svg>

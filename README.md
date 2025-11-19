@@ -153,55 +153,13 @@ struggle) on the same underlying radar measurement.
 
 The per‑epoch validation metrics for both models are logged inside `main.ipynb` and `resnet.ipynb` (lines such as
 `Epoch 030 | ... | val MAE(px) 5.980 | PCK@0.05 0.788`).  
-You can generate a line plot of these curves with a small helper script in your own Python environment:
+The consolidated training curves below show how validation MAE and PCK@0.05 evolve over epochs for both models:
 
-```python
-import json, re
-from pathlib import Path
-import matplotlib.pyplot as plt
+![Validation metrics per epoch](training_curves.svg)
 
-def extract_logs(nb_path: str):
-    nb = json.loads(Path(nb_path).read_text(encoding="utf-8"))
-    epochs, val_mae, pck = [], [], []
-    for cell in nb.get("cells", []):
-        for out in cell.get("outputs", []):
-            if out.get("output_type") != "stream":
-                continue
-            for line in "".join(out.get("text", "")).splitlines():
-                m = re.search(
-                    r"Epoch\\s+(\\d+)\\s*\\|[^|]*\\|\\s*train\\s+[0-9.]+\\s*\\|\\s*val MAE\\(px\\)\\s*([0-9.]+)\\s*\\|\\s*PCK@0.05\\s*([0-9.]+)",
-                    line,
-                )
-                if m:
-                    epochs.append(int(m.group(1)))
-                    val_mae.append(float(m.group(2)))
-                    pck.append(float(m.group(3)))
-    return epochs, val_mae, pck
-
-main_ep, main_mae, main_pck = extract_logs("main.ipynb")
-res_ep, res_mae, res_pck = extract_logs("resnet.ipynb")
-
-fig, (ax1, ax2) = plt.subplots(2, 1, figsize=(8, 8), sharex=True)
-ax1.plot(main_ep, main_mae, label="CNN val MAE")
-ax1.plot(res_ep, res_mae, label="ResNet18 val MAE")
-ax1.set_ylabel("Val MAE (px)")
-ax1.grid(True, alpha=0.3)
-ax1.legend()
-
-ax2.plot(main_ep, main_pck, label="CNN PCK@0.05")
-ax2.plot(res_ep, res_pck, label="ResNet18 PCK@0.05")
-ax2.set_xlabel("Epoch")
-ax2.set_ylabel("PCK@0.05")
-ax2.grid(True, alpha=0.3)
-ax2.legend()
-
-fig.suptitle("Validation metrics per epoch (P1, 128×128)")
-fig.tight_layout()
-plt.show()
-```
-
-Run this (e.g. from a small script or a separate notebook cell in the repo root) to visualise how MAE and PCK
-evolve per epoch for both the baseline CNN and the ResNet18 model.
+The CNN curve is plotted over all available epochs, while the ResNet18 curve is shown from epoch 7 onward (after
+resume), matching the logged training runs. This highlights both the stronger final accuracy and the faster
+convergence of the ResNet18 backbone compared to the baseline CNN.
 
 ## Pod / hardware configuration
 
