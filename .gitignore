@@ -51,3 +51,5 @@ Thumbs.db
 *.joblib
 models/
 checkpoint/
+checkpoint_coreact/
+checkpoint_resnet/
